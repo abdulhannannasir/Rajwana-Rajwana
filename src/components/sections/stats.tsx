@@ -1,6 +1,7 @@
 'use client';
 import { useRef } from 'react';
 import { useInView } from 'motion/react';
+import { FadeInItem, FadeInStagger } from '@/components/fade-in-stagger';
 import { AnimatedNumber } from '@/components/motion-primitives/animated-number';
 import { stats } from '@/content/site';
 
@@ -11,9 +12,10 @@ export function Stats() {
 
   return (
     <section aria-label="The firm in numbers" className="pb-20 lg:pb-26">
-      <div ref={ref} className="mx-auto grid max-w-6xl grid-cols-1 gap-4 px-4 sm:px-6 md:grid-cols-3 lg:px-10">
+      <div ref={ref} className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+        <FadeInStagger className="grid grid-cols-1 gap-4 md:grid-cols-3">
         {stats.map((s) => (
-          <div
+          <FadeInItem
             key={s.label}
             className="flex flex-col gap-2.5 rounded-[28px] bg-card p-7 shadow-[0_0_0_1px_var(--line),0_2px_4px_rgba(0,0,0,0.04)]"
           >
@@ -23,8 +25,9 @@ export function Stats() {
             </span>
             <span className="font-semibold">{s.label}</span>
             <span className="text-sm text-muted">{s.detail}</span>
-          </div>
+          </FadeInItem>
         ))}
+        </FadeInStagger>
       </div>
     </section>
   );

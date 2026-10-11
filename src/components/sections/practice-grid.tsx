@@ -2,6 +2,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import { GlassCard, GlassStage } from '@/components/glass-card';
 import { Icon } from '@/components/icons';
+import { FadeInItem, FadeInStagger } from '@/components/fade-in-stagger';
 import { Reveal } from '@/components/reveal';
 import { practiceAreas } from '@/content/site';
 
@@ -10,8 +11,8 @@ export function PracticeGrid() {
   return (
     <section id="practice" className="py-10 lg:py-14">
       <GlassStage>
-      <Reveal>
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+          <Reveal>
           <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
             <div>
               <span className="eyebrow !text-white/50">Practice areas</span>
@@ -24,9 +25,11 @@ export function PracticeGrid() {
               dispute can lead to a recovery suit.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          </Reveal>
+          <FadeInStagger className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {practiceAreas.map((p) => (
-              <GlassCard key={p.slug} href={`/practice/${p.slug}`}>
+              <FadeInItem key={p.slug} className="flex">
+              <GlassCard href={`/practice/${p.slug}`} className="w-full">
                 <span className="mb-1.5 grid size-11 place-items-center rounded-xl border border-white/10 bg-white/10 text-[#a9c6e6]">
                   <Icon name={p.icon} className="size-5" />
                 </span>
@@ -37,10 +40,10 @@ export function PracticeGrid() {
                   <ArrowUpRight className="size-4 text-white/50 transition-[transform,color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white" />
                 </span>
               </GlassCard>
+              </FadeInItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
-      </Reveal>
       </GlassStage>
     </section>
   );
