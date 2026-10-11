@@ -58,6 +58,9 @@ export function GlassStage({ className, children }: { className?: string; childr
       <div
         className={cn(
           'relative isolate mx-auto max-w-[88rem] overflow-hidden rounded-[2rem] bg-[#0a1017] py-16 lg:py-20',
+          // Hairline edge + top highlight; in dark mode the page is nearly the same colour, so lift the panel a step.
+          'shadow-[0_0_0_1px_rgba(255,255,255,0.08),inset_0_1px_0_rgba(255,255,255,0.1)]',
+          'dark:bg-[#101a25] dark:shadow-[0_0_0_1px_rgba(255,255,255,0.12),inset_0_1px_0_rgba(255,255,255,0.14),0_30px_80px_-30px_rgba(0,0,0,0.8)]',
           className,
         )}
       >
