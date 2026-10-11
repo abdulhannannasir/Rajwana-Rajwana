@@ -1,4 +1,5 @@
 import { MapPin, Phone, Printer, UserRound } from 'lucide-react';
+import { FadeInItem, FadeInStagger } from '@/components/fade-in-stagger';
 import { Reveal } from '@/components/reveal';
 import { firm, offices } from '@/content/site';
 
@@ -10,8 +11,8 @@ const mapsHref = (lines: string[]) =>
 export function Offices() {
   return (
     <section id="offices" className="pb-20 lg:pb-26">
-      <Reveal>
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+          <Reveal>
           <div className="mb-10 flex flex-wrap items-end justify-between gap-5">
             <div>
               <span className="eyebrow">Offices</span>
@@ -24,10 +25,12 @@ export function Offices() {
               <span className="select-all font-medium text-ink">{firm.email}</span>
             </p>
           </div>
+          </Reveal>
 
-          <div className="grid grid-cols-1 overflow-hidden rounded-3xl border border-line bg-card sm:grid-cols-2 lg:grid-cols-4">
+          <FadeInStagger className="grid grid-cols-1 overflow-hidden rounded-3xl border border-line bg-card sm:grid-cols-2 lg:grid-cols-4">
             {offices.map((o) => (
-              <address
+              <FadeInItem
+                as="address"
                 key={o.city}
                 className="flex min-w-0 flex-col gap-4 border-line p-6 not-italic [&:not(:last-child)]:border-b sm:[&:nth-child(odd)]:border-r lg:border-b-0 lg:[&:not(:last-child)]:border-r"
               >
@@ -74,11 +77,10 @@ export function Offices() {
                 >
                   Get directions
                 </a>
-              </address>
+              </FadeInItem>
             ))}
-          </div>
+          </FadeInStagger>
         </div>
-      </Reveal>
     </section>
   );
 }
