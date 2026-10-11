@@ -52,4 +52,12 @@ Until these are set, the form tells visitors it is not connected and shows the f
 
 ## Deploy
 
-Push to GitHub, import the repo in Vercel, then point the `rajwanaandrajwana.com` domain at the Vercel project (Vercel shows the DNS records to add at the domain registrar).
+The Vercel project `rajwana-site` is connected to this repository. Every push to `main`
+builds and deploys automatically to https://rajwana-site.vercel.app (about two minutes).
+
+### Going live on rajwanaandrajwana.com
+
+1. Vercel → rajwana-site → Settings → Domains → add `rajwanaandrajwana.com` and `www.rajwanaandrajwana.com`.
+2. At the domain registrar, add the DNS records Vercel shows (usually an `A` record and a `CNAME` for `www`).
+3. Vercel → Settings → Environment Variables → add `SITE_LIVE` = `true` (Production), then redeploy.
+   Until this is set, the site tells search engines not to index it.
