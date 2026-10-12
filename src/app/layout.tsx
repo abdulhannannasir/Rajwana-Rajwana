@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Hanken_Grotesk, IBM_Plex_Mono, Newsreader } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
+import { IntroLoader } from '@/components/intro-loader';
 import { SiteHeader } from '@/components/site-header';
 import { SiteFooter } from '@/components/site-footer';
 import { firm, founderWikipedia, offices, team } from '@/content/site';
@@ -66,8 +67,9 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${hanken.variable} ${plexMono.variable}`}>
+    <html lang="en" className={`${newsreader.variable} ${hanken.variable} ${plexMono.variable}`} suppressHydrationWarning>
       <body>
+        <IntroLoader />
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-ink focus:px-4 focus:py-2 focus:text-bg">
           Skip to content
         </a>
