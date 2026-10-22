@@ -131,18 +131,23 @@ function PartnerCard({ lawyer }: { lawyer: Lawyer }) {
 }
 
 // Watermelon team-1: portrait cards, qualifications revealed on hover or focus.
+// Advocates with a bio link through to their profile page; the link covers the whole card.
 function AdvocateCard({ lawyer }: { lawyer: Lawyer }) {
+  const hasProfile = Boolean(lawyer.bio);
   return (
     <article
-      tabIndex={0}
+      tabIndex={hasProfile ? undefined : 0}
       className="group relative aspect-[4/5] overflow-hidden rounded-[24px] border-[6px] border-card bg-bg shadow-[0_0_0_1px_var(--line)]"
     >
+      {hasProfile && (
+        <Link href={`/team/${lawyer.slug}`} aria-label={`${lawyer.name}, full profile`} className="absolute inset-0 z-10" />
+      )}
       <Portrait lawyer={lawyer} sizes="(min-width:1024px) 25vw, 50vw" className="absolute inset-x-0 top-0 h-[60%]" />
       <div className="absolute inset-x-1.5 bottom-1.5 rounded-[16px] bg-card px-3 py-2.5 sm:inset-x-2 sm:bottom-2 sm:px-4 sm:py-3">
         <h4 className="font-display text-[15px] leading-snug sm:text-[17px]">{lawyer.name}</h4>
         <p className="mt-0.5 text-[12px] text-accent-ink sm:text-[13px]">{lawyer.enrolment}</p>
         {lawyer.qualifications && (
-          <div className="grid grid-rows-[0fr] transition-[grid-template-rows,margin] duration-300 group-hover:mt-2 group-hover:grid-rows-[1fr] group-focus:mt-2 group-focus:grid-rows-[1fr]">
+          <div className="grid grid-rows-[0fr] transition-[grid-template-rows,margin] duration-300 group-hover:mt-2 group-hover:grid-rows-[1fr] group-focus:mt-2 group-focus:grid-rows-[1fr] group-focus-within:mt-2 group-focus-within:grid-rows-[1fr]">
             <ul className="overflow-hidden text-[12px] leading-relaxed text-muted">
               {lawyer.qualifications.map((q) => (
                 <li key={q}>{q}</li>
