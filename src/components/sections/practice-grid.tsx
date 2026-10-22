@@ -17,7 +17,7 @@ export function PracticeGrid() {
             <div>
               <span className="eyebrow !text-white/50">Practice areas</span>
               <h2 className="mt-3 max-w-[18ch] text-white text-[clamp(1.9rem,4.4vw,3rem)] leading-[1.1]">
-                Six areas of practice, one team behind each matter
+                Our areas of practice, one team behind each matter
               </h2>
             </div>
             <p className="max-w-[42ch] text-white/60">

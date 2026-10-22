@@ -1,5 +1,5 @@
 import {
-  Briefcase, ClipboardCheck, Clock, FileText, Landmark, Receipt, Scale, ShieldCheck,
+  Banknote, Briefcase, ClipboardCheck, Clock, FileText, Globe, Landmark, Receipt, Scale, ShieldCheck, Zap,
   type LucideProps,
 } from 'lucide-react';
 
@@ -12,6 +12,9 @@ const map = {
   shield: ShieldCheck,
   clock: Clock,
   file: FileText,
+  zap: Zap,
+  banknote: Banknote,
+  globe: Globe,
 } as const;
 
 export type IconName = keyof typeof map;
