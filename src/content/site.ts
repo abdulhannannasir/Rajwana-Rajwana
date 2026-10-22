@@ -19,9 +19,8 @@ export const firm = {
   email: 'rajwanaandrajwana@gmail.com',
   // TODO: confirm office hours
   hours: 'Monday to Saturday, 10:00 to 18:00',
-  // The firm's Aug 2024 profile and Asif Rajwana's CV both say it was established in Multan in 1975.
-  // TODO: confirm with the partners before publishing. The founder's own bio says he joined the
-  // judiciary in 1987 and established the firm after resigning, which reads as later than 1975.
+  // Established in Multan in 1975, per the firm's Aug 2024 profile and Asif Rajwana's CV
+  // (confirmed by the firm). Used for the years-in-practice stat and the About text.
   founded: 1975,
 };
 
@@ -340,7 +339,7 @@ export const practiceAreas: PracticeArea[] = [
 ];
 
 // Figures come from the firm's profiles: the year it was established (`firm.founded`), the clients
-// listed (106) and the Oct 2026 list of lawyers (20). Update them when the profile changes.
+// listed (106) and the lawyers listed in `team` (26). Update them when the profile changes.
 export const stats = [
   {
     value: new Date().getFullYear() - firm.founded,
@@ -349,7 +348,7 @@ export const stats = [
     detail: `Since the firm was established in Multan in ${firm.founded}.`,
   },
   { value: 100, suffix: '+', label: 'Clients served', detail: 'Public bodies, banks, universities and industry.' },
-  { value: 20, suffix: '', label: 'Lawyers', detail: 'Senior advocates, barristers and associates.' },
+  { value: 26, suffix: '', label: 'Lawyers', detail: 'Senior advocates, barristers and associates.' },
 ];
 
 // From the "Our approach", "Our philosophy" and "Cost effective" sections of the firm's profile.
@@ -613,6 +612,20 @@ export const team: Lawyer[] = [
     ],
   },
   {
+    slug: 'ahtesham-ud-din-khan',
+    name: 'Ahtesham Ud Din Khan',
+    role: 'Advocate',
+    enrolment: 'Advocate High Court',
+    qualifications: ['LLM (UK)'],
+  },
+  {
+    slug: 'nouman-sawar-ghuman',
+    name: 'Nouman Sawar Ghuman',
+    role: 'Advocate',
+    enrolment: 'Advocate High Court',
+    qualifications: ['LLM (UK)'],
+  },
+  {
     slug: 'oman-ali-nasir',
     name: 'Oman Ali Nasir',
     role: 'Advocate',
@@ -642,6 +655,13 @@ export const team: Lawyer[] = [
     ],
   },
   {
+    slug: 'ibtasam-ahmad',
+    name: 'Barrister Muhammad Ibtasam Ahmad',
+    role: 'Advocate',
+    enrolment: 'Advocate High Court',
+    qualifications: ['LLM, International Law (UK)', 'LLM, Human Rights (UK)'],
+  },
+  {
     slug: 'hasnat-khan',
     name: 'Barrister Muhammad Hasnat Khan',
     role: 'Advocate',
@@ -669,6 +689,25 @@ export const team: Lawyer[] = [
     bio: [
       'Muhammad Abdullah Shah was enrolled as an advocate of the lower courts in April 2025 and joined Rajwana & Rajwana as an associate in June 2025. He researches and drafts pleadings, petitions and advisory notes in tax, customs and regulatory matters, and appears for corporate clients before tax tribunals and appellate courts.',
     ],
+  },
+  {
+    slug: 'rana-ahsan-rehman',
+    name: 'Rana Ahsan Rehman',
+    role: 'Advocate',
+    enrolment: 'Advocate',
+  },
+  {
+    slug: 'rana-shehriyar',
+    name: 'Rana Shehriyar',
+    role: 'Advocate',
+    enrolment: 'Advocate',
+  },
+  {
+    slug: 'ashar-raza',
+    name: 'Ashar Raza',
+    role: 'Advocate',
+    enrolment: 'Advocate',
+    qualifications: ['LLM'],
   },
   {
     slug: 'shakeeb-arshad',

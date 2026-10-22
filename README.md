@@ -17,14 +17,14 @@ All text lives in **`src/content/site.ts`**: firm details, practice areas, stats
 Search that file for `TODO` and replace every placeholder with verified information before launch:
 
 - [ ] Office hours
-- [ ] Founding year: the site now says 1975 (the firm's Aug 2024 profile and Asif Rajwana's CV), shown in the stats card, the About section and the site description. The founder's own bio says he joined the judiciary in 1987 and founded the firm after resigning, which reads as later, so confirm with the partners.
-- [x] Stats (years since `founded`, 100+ clients, 20 lawyers) and the About section, from the firm's profiles
-- [ ] Older profiles (Aug 2024, Aug 2026) list lawyers the Oct 2026 profile drops: Ahtesham Ud Din Khan, Nouman Sawar Ghuman, Barrister Muhammad Ibtasam Ahmad, Rana Ahsan Rehman, Rana Shehriyar and Ashar Raza. They are not on the site; add them to `team` if they are still with the firm.
+- [x] Founding year 1975, confirmed by the firm (shown in the stats card, the About section and the site description)
+- [x] Stats (years since `founded`, 100+ clients, 26 lawyers) and the About section, from the firm's profiles
+- [x] Six lawyers from the older profiles added (Ahtesham Ud Din Khan, Nouman Sawar Ghuman, Barrister Muhammad Ibtasam Ahmad, Rana Ahsan Rehman, Rana Shehriyar, Ashar Raza). They have no CVs, so they appear as name, enrolment and qualifications only; add a `bio` to give them a profile page.
 - [x] Team, from the profile and CVs. Still to confirm: Saleem's qualifications (marked `confirm`)
 - [ ] Rustam Khan Padhiar, Hamza Khakwani, Malik M. Saleem Rajwana and M. Shakeeb Arshad have no CV, so they appear as name and enrolment only. Add a `bio` to give them a profile page.
 - [ ] Portraits in `public/team/<slug>.jpg`, then set `photo` for each lawyer
 - [ ] Clients have agreed to be named on the website, not just in the profile (`clients` in `site.ts`)
-- [ ] Practice areas "Procurement" and "Insurance & regulatory" are not in the Oct 2026 profile; keep or drop them
+- [x] Practice areas "Procurement" and "Insurance & regulatory" are not in the firm's profiles; the firm chose to keep them
 - [ ] Whether the senior clerk's mobile should be public (Lahore office)
 - [ ] Insights articles (or remove `<Insights />` until real articles exist)
 - [x] Courts list in `forums`, from the profile and CVs
