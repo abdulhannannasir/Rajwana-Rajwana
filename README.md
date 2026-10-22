@@ -26,7 +26,7 @@ Search that file for `TODO` and replace every placeholder with verified informat
 - [ ] Clients have agreed to be named on the website, not just in the profile (`clients` in `site.ts`)
 - [x] Practice areas "Procurement" and "Insurance & regulatory" are not in the firm's profiles; the firm chose to keep them
 - [ ] Whether the senior clerk's mobile should be public (Lahore office)
-- [ ] Insights articles (or remove `<Insights />` until real articles exist)
+- [x] Insights section removed (it held placeholder articles); add a real one back when there are articles to publish
 - [x] Courts list in `forums`, from the profile and CVs
 - [ ] Partners approve the privacy notice, disclaimer and terms (`src/content/legal.ts`), including the 12-month retention period
 

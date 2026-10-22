@@ -25,7 +25,6 @@ export function SiteFooter() {
           <div>
             <h2 className="eyebrow mb-3.5 font-sans">Firm</h2>
             <Link href="/#team" className="block py-1 text-[15px] hover:text-accent-ink">Our lawyers</Link>
-            <Link href="/#insights" className="block py-1 text-[15px] hover:text-accent-ink">Insights</Link>
             <Link href="/#faq" className="block py-1 text-[15px] hover:text-accent-ink">FAQ</Link>
             <Link href="/#contact" className="block py-1 text-[15px] hover:text-accent-ink">Consultation</Link>
           </div>
