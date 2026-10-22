@@ -69,7 +69,6 @@ export const offices: Office[] = [
 export const nav = [
   { label: 'Practice areas', href: '/#practice' },
   { label: 'The firm', href: '/#team' },
-  { label: 'Insights', href: '/#insights' },
   { label: 'Offices', href: '/#offices' },
   { label: 'FAQ', href: '/#faq' },
   { label: 'Contact', href: '/#contact' },
@@ -735,28 +734,6 @@ export const clients = [
   { short: 'Al Baraka', name: 'Al Baraka Bank (Pakistan) Limited', sector: 'Banking' },
   { short: 'UBL', name: 'United Bank Limited', sector: 'Banking' },
   { short: 'HBL', name: 'Habib Bank Limited', sector: 'Banking' },
-];
-
-// TODO: replace with real articles or remove the section until there are some.
-export const insights = [
-  {
-    category: 'Tax',
-    title: 'Can a writ petition be filed against a tax notice?',
-    excerpt: 'When the High Court will hear a challenge directly, and when it will send you back to the appellate forum.',
-    href: '/#insights',
-  },
-  {
-    category: 'Litigation',
-    title: 'Summary suits under Order XXXVII: speed and its limits',
-    excerpt: 'What qualifies as a negotiable instrument claim, and how defendants obtain leave to defend.',
-    href: '/#insights',
-  },
-  {
-    category: 'Corporate',
-    title: 'Five clauses every shareholder agreement should settle',
-    excerpt: 'Deadlock, transfer restrictions, exit, information rights and dispute resolution under the Companies Act 2017.',
-    href: '/#insights',
-  },
 ];
 
 export const faqs = [
