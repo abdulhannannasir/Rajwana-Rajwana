@@ -16,8 +16,10 @@ npm run build      # production build
 All text lives in **`src/content/site.ts`**: firm details, practice areas, stats, team, FAQ, articles.
 Search that file for `TODO` and replace every placeholder with verified information before launch:
 
-- [ ] Founding year and office hours. The Oct 2026 profile gives no founding year, and the CVs conflict (1975 in Asif Rajwana's, but the founder joined the judiciary in 1987 and founded the firm after resigning). `founded` is not shown on the site until this is settled.
-- [x] Stats, from the Oct 2026 profile (founder's 45 years, 100+ clients, 20 lawyers)
+- [ ] Office hours
+- [ ] Founding year: the site now says 1975 (the firm's Aug 2024 profile and Asif Rajwana's CV), shown in the stats card, the About section and the site description. The founder's own bio says he joined the judiciary in 1987 and founded the firm after resigning, which reads as later, so confirm with the partners.
+- [x] Stats (years since `founded`, 100+ clients, 20 lawyers) and the About section, from the firm's profiles
+- [ ] Older profiles (Aug 2024, Aug 2026) list lawyers the Oct 2026 profile drops: Ahtesham Ud Din Khan, Nouman Sawar Ghuman, Barrister Muhammad Ibtasam Ahmad, Rana Ahsan Rehman, Rana Shehriyar and Ashar Raza. They are not on the site; add them to `team` if they are still with the firm.
 - [x] Team, from the profile and CVs. Still to confirm: Saleem's qualifications (marked `confirm`)
 - [ ] Rustam Khan Padhiar, Hamza Khakwani, Malik M. Saleem Rajwana and M. Shakeeb Arshad have no CV, so they appear as name and enrolment only. Add a `bio` to give them a profile page.
 - [ ] Portraits in `public/team/<slug>.jpg`, then set `photo` for each lawyer

@@ -10,7 +10,7 @@ export const firm = {
   name: 'Rajwana & Rajwana',
   tagline: 'Advocates & Legal Consultants',
   description:
-    'Advocates and legal consultants with offices in Lahore, Multan and Islamabad and a liaison office in Karachi. Power sector, banking, tax and commercial litigation, constitutional petitions, arbitration and corporate advisory.',
+    'Advocates and legal consultants, established in Multan in 1975, with offices in Lahore, Multan and Islamabad and a liaison office in Karachi. Power sector, banking, tax and commercial litigation, constitutional petitions, arbitration and corporate advisory.',
   url: 'https://rajwanaandrajwana.com',
   city: 'Lahore',
   // Head office (Lahore) details, shown in the contact block and footer
@@ -19,10 +19,10 @@ export const firm = {
   email: 'rajwanaandrajwana@gmail.com',
   // TODO: confirm office hours
   hours: 'Monday to Saturday, 10:00 to 18:00',
-  // TODO: confirm the founding year before publishing. The Oct 2026 profile does not give one;
-  // Asif Rajwana's CV says 1975, but the founder's CV has him joining the judiciary in 1987 and
-  // founding the firm after resigning. Not shown anywhere on the site until confirmed.
-  founded: 1990,
+  // The firm's Aug 2024 profile and Asif Rajwana's CV both say it was established in Multan in 1975.
+  // TODO: confirm with the partners before publishing. The founder's own bio says he joined the
+  // judiciary in 1987 and established the firm after resigning, which reads as later than 1975.
+  founded: 1975,
 };
 
 export type Office = {
@@ -117,7 +117,9 @@ export const forums = [
 
 export type PracticeArea = {
   slug: string;
-  icon: 'scale' | 'receipt' | 'landmark' | 'briefcase' | 'clipboard' | 'shield' | 'zap' | 'banknote' | 'globe';
+  icon:
+    | 'scale' | 'receipt' | 'landmark' | 'briefcase' | 'clipboard' | 'shield'
+    | 'zap' | 'banknote' | 'globe' | 'gavel' | 'house' | 'users';
   title: string;
   summary: string;
   law: string;
@@ -208,6 +210,7 @@ export const practiceAreas: PracticeArea[] = [
       'Writ petitions under Article 199',
       'Stay and interim relief applications',
       'Challenges to notices issued without jurisdiction',
+      'Election matters',
       'Service and regulatory matters',
       'Intra-court appeals',
     ],
@@ -225,6 +228,7 @@ export const practiceAreas: PracticeArea[] = [
       'Company and partnership formation',
       'Shareholder and joint venture agreements',
       'Commercial contracts and terms of business',
+      'Intellectual property: trade marks, copyright and proceedings before the IP Tribunals',
       'SECP filings and corporate compliance',
       'Board resolutions and governance documents',
     ],
@@ -280,15 +284,98 @@ export const practiceAreas: PracticeArea[] = [
     ],
     forums: ['Arbitral tribunals', 'Lahore High Court', 'Supreme Court of Pakistan'],
   },
+  {
+    slug: 'criminal-law',
+    icon: 'gavel',
+    title: 'Criminal law',
+    summary: 'Trials, bail and appeals, including criminal complaints under banking laws.',
+    law: 'CrPC 1898 · PPC 1860',
+    intro:
+      'We conduct criminal trials, bail applications and appeals, and appear in criminal complaints before the Banking Courts and the Special Courts for Banking Offences.',
+    matters: [
+      'Criminal trials and appeals',
+      'Bail applications',
+      'Criminal revisions and constitutional petitions',
+      'Criminal complaints before the Banking Courts and the Special Courts for Banking Offences',
+      'Cyber crime matters',
+    ],
+    forums: ['Sessions Courts', 'Special Courts for Banking Offences', 'Lahore High Court', 'Supreme Court of Pakistan'],
+  },
+  {
+    slug: 'civil-family-property',
+    icon: 'house',
+    title: 'Civil, family & property',
+    summary: 'Civil suits, family matters, property and revenue disputes, rent and execution.',
+    law: 'CPC 1908 · Family Courts Act',
+    intro:
+      'We act in civil and family courts and before revenue authorities, from the plaint and written statement through trial, appeal and execution.',
+    matters: [
+      'Civil suits, declarations and cancellation of documents',
+      'Injunctions and specific relief',
+      'Title, possession, partition and inheritance disputes',
+      'Revenue proceedings and land records, including mutations',
+      'Land acquisition proceedings',
+      'Family matters: dissolution of marriage, maintenance, dower, custody and guardianship',
+      'Rent and ejectment proceedings',
+    ],
+    forums: ['Civil Courts', 'Family Courts', 'Revenue authorities', 'Lahore High Court'],
+  },
+  {
+    slug: 'labour-service-education',
+    icon: 'users',
+    title: 'Labour, service & education',
+    summary: 'Labour and HR disputes, service matters, and work for universities and public institutions.',
+    law: 'Labour · Service · Education',
+    intro:
+      'We advise and represent employers, institutions and public bodies in labour, human-resource and service disputes, and act for universities and other education bodies.',
+    matters: [
+      'Labour and human-resource disputes',
+      'Service matters of public-sector employees',
+      'Matters of universities and education institutions',
+      'Consumer court proceedings',
+      'Writ petitions in service and education matters',
+    ],
+    forums: ['Labour Courts', 'Consumer Courts', 'Lahore High Court'],
+  },
 ];
 
-// Figures come from the firm's Oct 2026 profile: the founder's years in practice, the clients it
-// lists (106) and its list of lawyers (20). Update them when the profile changes.
+// Figures come from the firm's profiles: the year it was established (`firm.founded`), the clients
+// listed (106) and the Oct 2026 list of lawyers (20). Update them when the profile changes.
 export const stats = [
-  { value: 45, suffix: '', label: 'Years at the Bar', detail: "The founding partner's years in practice." },
+  {
+    value: new Date().getFullYear() - firm.founded,
+    suffix: '',
+    label: 'Years in practice',
+    detail: `Since the firm was established in Multan in ${firm.founded}.`,
+  },
   { value: 100, suffix: '+', label: 'Clients served', detail: 'Public bodies, banks, universities and industry.' },
   { value: 20, suffix: '', label: 'Lawyers', detail: 'Senior advocates, barristers and associates.' },
 ];
+
+// From the "Our approach", "Our philosophy" and "Cost effective" sections of the firm's profile.
+export const about = {
+  eyebrow: 'About the firm',
+  heading: 'Prepared early, supervised by a partner',
+  lead: `Rajwana & Rajwana was established in Multan in ${firm.founded} and has since opened offices in Lahore and Islamabad, with a liaison office in Karachi. We act for corporate, public-sector and private clients, and our lawyers are licensed to appear before the Supreme Court and the High Courts of Pakistan.`,
+  principles: [
+    {
+      title: 'Thorough preparation',
+      text: 'We take a detailed approach at the outset, so that strengths and weaknesses show early, especially in matters of factual and documentary complexity.',
+    },
+    {
+      title: 'Partner-led',
+      text: 'Every case is handled or supervised by a partner, who stays fully informed when junior lawyers deal with it.',
+    },
+    {
+      title: 'Settle or litigate',
+      text: 'Where ADR, arbitration or negotiation serves the client, we use it. When a case has to be argued in court, we prepare it fully.',
+    },
+    {
+      title: 'Multi-disciplinary teams',
+      text: 'Close links with bankers, chartered accountants, financial advisors, architects, engineers and surveyors let us assemble a combined team when a matter needs one.',
+    },
+  ],
+};
 
 // Team. Sources: the firm's Oct 2026 profile and the CVs supplied for it, plus public record for
 // the founding partner. Personal details in the CVs (ID numbers, dates of birth, home addresses,
