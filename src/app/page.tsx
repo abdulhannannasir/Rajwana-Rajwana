@@ -3,6 +3,7 @@ import { ForumsStrip } from '@/components/sections/forums-strip';
 import { PracticeGrid } from '@/components/sections/practice-grid';
 import { Clients } from '@/components/sections/clients';
 import { Stats } from '@/components/sections/stats';
+import { About } from '@/components/sections/about';
 import { Team } from '@/components/sections/team';
 import { Insights } from '@/components/sections/insights';
 import { Offices } from '@/components/sections/offices';
@@ -17,6 +18,7 @@ export default function HomePage() {
       <PracticeGrid />
       <Clients />
       <Stats />
+      <About />
       <Team />
       <Insights />
       <Offices />
