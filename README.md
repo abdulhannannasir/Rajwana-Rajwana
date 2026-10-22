@@ -18,7 +18,7 @@ Search that file for `TODO` and replace every placeholder with verified informat
 
 - [ ] Founding year and office hours. The Oct 2026 profile gives no founding year, and the CVs conflict (1975 in Asif Rajwana's, but the founder joined the judiciary in 1987 and founded the firm after resigning). `founded` is not shown on the site until this is settled.
 - [x] Stats, from the Oct 2026 profile (founder's 45 years, 100+ clients, 20 lawyers)
-- [x] Team, from the profile and CVs. Still to confirm: Saleem's qualifications (marked `confirm`); Sohail Ashiq Shujra was removed because the profile's team list does not include them
+- [x] Team, from the profile and CVs. Still to confirm: Saleem's qualifications (marked `confirm`)
 - [ ] Rustam Khan Padhiar, Hamza Khakwani, Malik M. Saleem Rajwana and M. Shakeeb Arshad have no CV, so they appear as name and enrolment only. Add a `bio` to give them a profile page.
 - [ ] Portraits in `public/team/<slug>.jpg`, then set `photo` for each lawyer
 - [ ] Clients have agreed to be named on the website, not just in the profile (`clients` in `site.ts`)
